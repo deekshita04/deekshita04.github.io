@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Graph Generator</title>
+    <link rel="stylesheet" href="styles_grapher.css">
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="index.html">Check Point</a></li>
+            <li><a href="grapher.html">Grapher</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Drift Current Visualisation</h1><br>
+        <form id="graph-form">
+            <label for="charge_number">Enter Charge Desity(n) (order of 10^23):</label>
+            <input type="range" id="charge_number" name="charge_number" min="1" max="100" value="40" oninput="document.getElementById('charge_value').textContent=this.value" required>
+            <span id="charge_value">40</span>
+
+            <label for="mobility">Mobility(m) (order of 10^4):</label>
+            <input type="range" id="mobility" name="mobility" min="1" max="100" value="33" oninput="document.getElementById('mobility_value').textContent=this.value" required>
+            <span id="mobility_value">33</span>
+            
+            <button type="submit">Generate Graph</button>
+        </form>
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src="script_grapher.js"></script>
+</body>
+</html>
+
