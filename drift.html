@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Graph Generator</title>
+    <link rel="stylesheet" href="styles_drift.css">
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="index.html">Check Point</a></li>
+            <li><a href="drift.html">Drift</a></li>
+            <li><a href="grapher.html">Drift Visualisation</a></li>
+            <li><a href="services.html">Diffusion Visualisation</a></li>
+            <li><a href="faq.html">Quiz</a></li>
+        </ul>
+    </div>
+
+
+    <div class="quiz-container">
+        <h1>Drift and Diffusion</h1>
+        <h2>Drift</h2>
+            <ul>
+                <li>Charge carriers (electrons or holes) in a doped semiconductor begin to move in the direction of the electric field when it is applied across it.</li>
+                <li>As they are moving, they undergo collisions with vibrating Si atoms. This makes their movement unpredictable, haphazard (also known as Brownian motion).</li>
+                <li>However, the net velocity of each charge carrier is in the direction of the electric field.</li>
+                <li>Therefore, the velocity can be modeled as:
+                    <div class="formula"><b>
+                        vd = -чn * E &emsp; for electrons<br>
+                        vd = чp * E &emsp; for holes</b>
+                    </div>
+                </li>
+                <li>ч is the mobility of the electron defined by the ratio of vd and E. Mobility can be thought of as the ease of carrier drift.</li>
+            </ul>
+        
+            <h3>Drift Current Density</h3>
+            <p>Drift current density is proportional to velocity, density, and charge of carriers.</p>
+            <text>
+                <div class="formula"><b>
+                    Jn = -qnvdn = -qnчn * E &emsp;for electrons<br>
+                    Jp = qpvpn = -qnчp * E &emsp;for holes
+                </b></div>    
+            </text>
+            <p>Therefore, the total drift velocity is:</p>
+            <text>
+                <div class="formula"><b>J = Jn + Jp</b></div>
+                <li>According to Ohm’s law, the total drift velocity can be modeled as:</li>
+                <div class="formula"><b>J = σE = E/ρ </b></div>
+                where σ is conductivity and ρ is resistivity
+            </text>
+        
+            <h2>Diffusion Current</h2>
+            <text>
+                <li>The process by which charge carriers in a semiconductor move from a region of higher concentration to a region of lower concentration. In other words, diffusion is particle movement (flux) in response to a concentration gradient.</li>
+                <li>Flux is defined as the number of particles crossing a unit area per unit time.</li>
+                <li>Diffusion process occurs in a semiconductor that is non-uniformly doped. The overall result is to erase the charge gradient. Collisions between particles and medium send particles off in random directions.</li>
+                <li>Current produced due to diffusion is diffusion current.</li>
+            </text>
+        
+            <h3>Fick's First Law</h3>
+            <text>
+                <li>It states that Diffusion Flux is proportional to the concentration gradient.</li>
+                <div class="formula"><b>Fn = -Dn * (dn/dx) &emsp; for electrons<br>
+                Fp = -Dp * (dn/dx) &emsp; for holes</b></div>
+                <li>D is the diffusion coefficient. It measures the ease of carrier diffusion in response to a concentration gradient. D is limited by the vibration of lattice atoms and ionized dopants.</li>
+                <li>Diffusion current is the charge of the carrier times the flux of the semiconductor.</li>
+                <div class="formula"><b>Jn = -qDn * (dn/dx) &emsp; for electrons<br>
+                Jp = -Dp * (dn/dx) &emsp; for holes<br>
+                Jtotal = Jp + Jn</b></div>
+            </text>
+
+    </div>
+
+    
+</body>
+
