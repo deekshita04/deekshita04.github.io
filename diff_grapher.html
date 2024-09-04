@@ -21,21 +21,21 @@
         </ul>
     </div>
     <div class="container">
-        <h1>Drift Current Visualisation</h1><br>
+        <h1>Diffusion Visualisation</h1><br>
         <form id="graph-form">
-            <label for="charge_number">Enter Charge Desity(n) (order of 10^23):</label>
-            <input type="range" id="charge_number" name="charge_number" min="1" max="100" value="40" oninput="document.getElementById('charge_value').textContent=this.value" required>
-            <span id="charge_value">40</span>
+            <label for="gradient_const">Power of the exponential gradient:</label>
+            <input type="range" id="gradient_const" name="gradient_const" min="0" max="100" value="40" oninput="document.getElementById('gradient_const_value').textContent=this.value" required>
+            <span id="gradient_const_value">40</span>
 
             <label for="mobility">Mobility(m) (order of 10^4):</label>
-            <input type="range" id="mobility" name="mobility" min="1" max="100" value="33" oninput="document.getElementById('mobility_value').textContent=this.value" required>
+            <input type="range" id="mobility" name="mobility" min="0" max="100" value="33" oninput="document.getElementById('mobility_value').textContent=this.value" required>
             <span id="mobility_value">33</span>
-            
+
             <button type="submit">Generate Graph</button>
         </form>
         <canvas id="myChart"></canvas>
     </div>
-    <script src="script_grapher.js"></script>
+    <script src="script_diff_grapher.js"></script>
 </body>
 </html>
 
