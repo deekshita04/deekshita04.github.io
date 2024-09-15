@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Line Graph Generator</title>
+    <title>Drift and Diffusion</title>
     <link rel="stylesheet" href="styles_drift.css">
     <link rel="stylesheet" href="basic.css">
     <!-- Include Chart.js -->
@@ -31,8 +31,8 @@
                 <li>However, the net velocity of each charge carrier is in the direction of the electric field.</li>
                 <li>Therefore, the velocity can be modeled as:
                     <div class="formula"><b>
-                        vd = -чn * E &emsp; for electrons<br>
-                        vd = чp * E &emsp; for holes</b>
+                        v<sub>d</sub> = -ч<sub>n</sub> * E &emsp; for electrons<br>
+                        v<sub>d</sub> = ч<sub>p</sub> * E &emsp; for holes</b>
                     </div>
                 </li>
                 <li>ч is the mobility of the electron defined by the ratio of vd and E. Mobility can be thought of as the ease of carrier drift.</li>
@@ -42,15 +42,15 @@
             <p>Drift current density is proportional to velocity, density, and charge of carriers.</p>
             <text>
                 <div class="formula"><b>
-                    Jn = -qnvdn = -qnчn * E &emsp;for electrons<br>
-                    Jp = qpvdp = -qnчp * E &emsp;for holes
+                    J<sub>n</sub> = -q<sub>n</sub>vd<sub>n</sub> = -q<sub>n</sub>ч<sub>n</sub> * E &emsp;for electrons<br>
+                    J<sub>p</sub> = -q<sub>p</sub>v*d<sub>p</sub> = -q<sub>p</sub>ч<sub>p</sub> * E &emsp;for holes
                 </b></div>    
             </text>
             <p>Therefore, the total drift velocity is:</p>
             <text>
-                <div class="formula"><b>J = Jn + Jp</b></div>
+                <div class="formula"><b>J<sub>drift</sub> = J<sub>n</sub> + J<sub>p</sub></b></div>
                 <li>According to Ohm’s law, the total drift velocity can be modeled as:</li>
-                <div class="formula"><b>J = σE = E/ρ </b></div>
+                <div class="formula"><b>J<sub>drift</sub> = σE = E/ρ </b></div>
                 where σ is conductivity and ρ is resistivity
             </text>
         
@@ -65,13 +65,13 @@
             <h3>Fick's First Law</h3>
             <text>
                 <li>It states that Diffusion Flux is proportional to the concentration gradient.</li>
-                <div class="formula"><b>Fn = -Dn * (dn/dx) &emsp; for electrons<br>
-                Fp = -Dp * (dn/dx) &emsp; for holes</b></div>
+                <div class="formula"><b>F<sub>n</sub> = -D<sub>n</sub> * (dn/dx) &emsp; for electrons<br>
+                F<sub>p</sub> = -D<sub>p</sub> * (dn/dx) &emsp; for holes</b></div>
                 <li>D is the diffusion coefficient. It measures the ease of carrier diffusion in response to a concentration gradient. D is limited by the vibration of lattice atoms and ionized dopants.</li>
                 <li>Diffusion current is the charge of the carrier times the flux of the semiconductor.</li>
-                <div class="formula"><b>Jn = -qDn * (dn/dx) &emsp; for electrons<br>
-                Jp = -Dp * (dn/dx) &emsp; for holes<br>
-                Jtotal = Jp + Jn</b></div>
+                <div class="formula"><b>J<sub>n</sub> = -qD<sub>n</sub> * (dn/dx) &emsp; for electrons<br>
+                J<sub>p</sub> = -D<sub>p</sub> * (dn/dx) &emsp; for holes<br>
+                J<sub>diff</sub> = J<sub>p</sub> + J<sub>n</sub></b></div>
             </text>
 
     </div>

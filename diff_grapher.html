@@ -22,12 +22,24 @@
     </div>
     <div class="container">
         <h1>Diffusion Visualisation</h1><br>
+        <u1></u1>
+            As seen previously,<br>
+            <div class="formula"><b>
+                J<sub>n</sub> = -qD<sub>n</sub> * (dn/dx) &emsp;for electrons<br></b>
+            </div>
+            We will be considering the equation for electrons to plot the diffusion current with respect to the length of the semiconductor.<br>
+            The concentration gradient function for this is taken as,<br>
+            <div class="formula"><b>
+                n = 1-e<sup>-k</sup></b> 
+            </div>
+            where e ia a constant approximated to 2.72<br><br>
+        </u1>
         <form id="graph-form">
-            <label for="gradient_const">Power of the exponential gradient:</label>
+            <label for="gradient_const">Power of the exponential gradient(k):</label>
             <input type="range" id="gradient_const" name="gradient_const" min="0" max="100" value="40" oninput="document.getElementById('gradient_const_value').textContent=this.value" required>
             <span id="gradient_const_value">40</span>
 
-            <label for="mobility">Mobility(m) (order of 10^4):</label>
+            <label for="mobility">Diffusivity constant(D<sub>n</sub>) (order of 10^5):</label>
             <input type="range" id="mobility" name="mobility" min="0" max="100" value="33" oninput="document.getElementById('mobility_value').textContent=this.value" required>
             <span id="mobility_value">33</span>
 

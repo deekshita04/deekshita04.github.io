@@ -30,7 +30,7 @@ document.getElementById('graph-form').addEventListener('submit', function(event)
         data: {
             labels: labels,
             datasets: [{
-                label: `y = f(x) with dynamic slope`,
+                label: `y = f(x)`,
                 data: data,
                 borderColor: 'rgba(75, 192, 192, 1)',
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -43,7 +43,7 @@ document.getElementById('graph-form').addEventListener('submit', function(event)
                 x: {
                     title: {
                         display: true,
-                        text: 'Electric field across the semiconductor'
+                        text: 'Electric field across the semiconductor (in Volt/meter)'
                     },
                     beginAtZero: true,
                     min:0
@@ -51,7 +51,7 @@ document.getElementById('graph-form').addEventListener('submit', function(event)
                 y: {
                     title: {
                         display: true,
-                        text: 'Drift current(order of 10^4)'
+                        text: 'Drift current(order of 10^2 Amperes/m.m)'
                     },
                     beginAtZero: true,
                     max:250,

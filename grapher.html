@@ -22,12 +22,19 @@
     </div>
     <div class="container">
         <h1>Drift Current Visualisation</h1><br>
+        <u1>
+            As seen previously,<br>
+            <div class="formula"><b>
+                J<sub>n</sub> = -q<sub>n</sub>ч<sub>n</sub> * E &emsp;for electrons<br></b>
+            </div>
+            We will be considering the equation for electrons to plot the drift current with respect to electric field.<br>
+        </u1>
         <form id="graph-form">
-            <label for="charge_number">Enter Charge Desity(n) (order of 10^23):</label>
+            <label for="charge_number">Enter Charge Desity(n) (order of 10^21 C/m<sup>3</sup>):</label>
             <input type="range" id="charge_number" name="charge_number" min="1" max="100" value="40" oninput="document.getElementById('charge_value').textContent=this.value" required>
             <span id="charge_value">40</span>
 
-            <label for="mobility">Mobility(m) (order of 10^4):</label>
+            <label for="mobility">Mobility(m) (order of 10^4 m<sup>2</sup>/sV):</label>
             <input type="range" id="mobility" name="mobility" min="1" max="100" value="33" oninput="document.getElementById('mobility_value').textContent=this.value" required>
             <span id="mobility_value">33</span>
             

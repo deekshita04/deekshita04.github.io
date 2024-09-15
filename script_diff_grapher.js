@@ -13,9 +13,9 @@ document.getElementById('graph-form').addEventListener('submit', function(event)
         labels.push(x);
 
         // Corrected the exponentiation
-        const dx = m * 1.6 * 25 / 1.3;
+        //const dx = m * 1.6 * 25 / 1.3;
         const gradient = 1 - Math.pow(2.72, -1 * x * n); // or use 1 - (2.72 ** (-1 * x * n))
-        data.push(dx * gradient);  // Modified data generation
+        data.push(m * gradient);  // Modified data generation
     }
 
     // Get the canvas element
@@ -32,7 +32,7 @@ document.getElementById('graph-form').addEventListener('submit', function(event)
         data: {
             labels: labels,
             datasets: [{
-                label: `y = f(x) with dynamic slope`,
+                label: `y = f(x)`,
                 data: data,
                 borderColor: 'rgba(75, 192, 192, 1)',
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -45,13 +45,13 @@ document.getElementById('graph-form').addEventListener('submit', function(event)
                 x: {
                     title: {
                         display: true,
-                        text: 'Electric field across the semiconductor'
+                        text: 'Length of the semiconductor (in centimeters)'
                     }
                 },
                 y: {
                     title: {
                         display: true,
-                        text: 'Drift current (order of 10^4)'
+                        text: 'diffusion current (order of 10^4 Ampere/m.m)'
                     },
                     max:3500,
                     min:0
