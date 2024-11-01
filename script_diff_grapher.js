@@ -13,9 +13,9 @@ document.getElementById('graph-form').addEventListener('submit', function(event)
         labels.push(x);
 
         // Corrected the exponentiation
-        //const dx = m * 1.6 * 25 / 1.3;
+        const dx = m * 1.6 * 25 / 1.3;
         const gradient = 1 - Math.pow(2.72, -1 * x * n); // or use 1 - (2.72 ** (-1 * x * n))
-        data.push(m * gradient);  // Modified data generation
+        data.push(dx * gradient);  // Modified data generation
     }
 
     // Get the canvas element
