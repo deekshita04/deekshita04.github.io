@@ -12,10 +12,10 @@ document.getElementById('quiz-form').addEventListener('submit', function(event) 
     };
 
     const explanations = {
-        q1: 'As these electrons move, they constantly collide with the positive ions and other atoms in the conductor. This collision releases heat',
-        q2: 'The valence band of the atoms is partially filled.If the electrons don’t have enough energy to jump across the band gap, the it does not conduct at all, otherwise it does.',
-        q3: 'N-type semiconductors are obtained by doping with elements that have more valence electrons. P-type semiconductors are obtained by doping with elements that have fewer valence electrons',
-        q4: 'At the junction, some of the free electrons in the n-type wander into the p-type due to diffusion. As they diffuse into the p-type they combine with holes, and cancel each other out.'
+        q1: "When an electric field is applied, free electrons in the conductor accelerate, gaining kinetic energy.As these electrons move, they frequently collide with the vibrating atoms (or ions) in the crystal lattice.During these collisions, the electrons lose energy, transferring it to the lattice atoms, causing them to vibrate more.The increased vibration of lattice atoms is manifested as heat, leading to a temperature rise in the conductor.This phenomenon is known as resistive heating or Joule heating ',
+        q2: 'Extrinsic semiconductors are doped with impurities to increase their conductivity.In n-type semiconductors, donor atoms provide extra electrons, making electrons the majority charge carriers.In p-type semiconductors, acceptor atoms create holes, making holes the majority charge carriers.These charge carriers (electrons or holes) move under the influence of an electric field, enabling electrical conduction.',
+        q3: 'The main difference between n-type and p-type semiconductors lies in the type of majority charge carriers introduced through doping.The n-type semiconductors are doped with donor impurities (e.g., phosphorus, arsenic).Doping introduces additional free electrons as majority charge carriers. The p-type semiconductors are doped with acceptor impurities (e.g., boron, gallium).This creates holes (absence of electrons) as majority charge carriers.',
+        q4: 'Charge movement happens due to the concentration gradient of carriers, leading to the establishment of the depletion region and the built-in electric field, even without an externally applied field.'
     };
 
     const formData = new FormData(this);
